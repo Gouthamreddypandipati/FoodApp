@@ -6,6 +6,7 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 function App() {
+  var a =0;
   return (
     <Router>
       <Header></Header>
