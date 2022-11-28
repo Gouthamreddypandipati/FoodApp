@@ -6,7 +6,7 @@ function Fotter() {
     <div>
       <Container>
         <Row>
-            <Col className='text-center py-3'>Copyright &copy; proshop</Col>
+            <Col className='text-center py-3'>Copyright &copy; Foodapp</Col>
         </Row>
       </Container>
     </div>

@@ -13,7 +13,7 @@ function Header() {
         <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
       <Container fluid>
         <LinkContainer to='/'>
-        <Navbar.Brand>Proshop</Navbar.Brand>
+        <Navbar.Brand>Food App</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

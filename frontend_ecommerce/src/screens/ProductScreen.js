@@ -16,21 +16,21 @@ function ProductScreen() {
     const [product,setproduct]=useState([])
     useEffect(()=>{
         async function fetchproducts(){
-          const {data}= await axios.get(`/api/product/${id}`)
+          const {data}= await axios.get(`/api/products/${id}`)
           setproduct(data)
         }
         fetchproducts()
         
       },[])
     const addtocart=()=>{
-         navigate(`/cart/${id}?qty=${qty}`)
+         navigate(`/cart/${id}/${qty}`)
     }
   return (
     <div>
       <Link to='/' className='btn btn-light my-3'>Go Back</Link>
       <Row>
         <Col md={6}>
-            <Image src={product.image} alt={product.name} fluid></Image>
+            <Image src={product.image} alt={product.name} fluid  ></Image>
         </Col>
         <Col md={3}>
             <ListGroup variant="flush">
@@ -41,10 +41,10 @@ function ProductScreen() {
                 <Rating value={product.rating} text={`${product.numReviews} reviews`} color={'#f8e824'}></Rating>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                    Price:${product.price}
+                    Price:{product.price}
                 </ListGroup.Item>
                 <ListGroup.Item>
-                    Price:${product.description}
+                    ABOUT:{product.description}
                 </ListGroup.Item>
 
             </ListGroup>
