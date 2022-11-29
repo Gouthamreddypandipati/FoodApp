@@ -1,11 +1,11 @@
 import React from 'react'
 import {Row,Col} from 'react-bootstrap'
 import Product from '../components/Product'
-import products from '../products'
 import { useEffect, useState } from 'react'
 import {useDispatch,useSelector} from 'react-redux'
 import {listProducts} from '../actions/productActions'
 import Loader from '../components/Loader'
+
 function HomeScreen() {
   const dispatch=useDispatch()
   const productList=useSelector(state=> state.productList)

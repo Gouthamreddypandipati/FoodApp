@@ -1,10 +1,12 @@
-import {Link ,useParams} from 'react-router-dom'
+import {Link ,useNavigate,useParams} from 'react-router-dom'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
 import { addToCart,removeFromCart } from '../actions/cartActions'
 
 function CartScreen({Location}) {
+
+    let navigate = useNavigate()
   console.log(useParams())
   const {id}=useParams()
   const {qty}=useParams()
@@ -25,6 +27,7 @@ function CartScreen({Location}) {
 
 const checkoutHandler = () => {
     console.log("check out")
+    navigate('/shipping')
 }
 
   return (
