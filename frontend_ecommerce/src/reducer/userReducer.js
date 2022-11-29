@@ -20,7 +20,7 @@ export const USERLoginReducers= (state ={},action)=>{
         case USER_LOGIN_SUCCESS:
             console.log('login executed from backend')
             
-            return {loading:false, userinfo:action.payload}
+            return {loading:false, userInfo:action.payload}
 
         case USER_LOGIN_FAIL:
             return {loading:false, error:action.payload}

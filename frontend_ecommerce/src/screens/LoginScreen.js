@@ -6,7 +6,7 @@ import {login} from '../actions/userActions'
 import FormContainer from '../components/FormContainer'
 import { useNavigate } from 'react-router-dom';
 
-function LoginScreen() {
+function LoginScreen(props) {
     let navigate = useNavigate();
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
@@ -14,6 +14,7 @@ function LoginScreen() {
     const dispatch=useDispatch()
 
     const {redirect}= useParams()
+    // const redirect1 = location.search ? location.search.split('=')[1] : '/'
 
     const userLogin=useSelector(state=>state.userLogin)
     const {error,loading,userInfo}=userLogin
@@ -21,11 +22,9 @@ function LoginScreen() {
     useEffect(()=>{
         if(userInfo){
             navigate('/')
-            // console.log('getting data')
         }
-    },[userInfo,redirect])
+    },[navigate,userInfo,redirect])
     const submitHandler=(e)=>{
-        navigate('/')
         dispatch(login(email,password))
         e.preventDefault()
 
